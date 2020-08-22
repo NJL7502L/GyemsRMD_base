@@ -74,6 +74,7 @@ int GyemsRMD_base::canClassify(uint8_t data[8]) {
   }
 }
 
-int GyemsRMD_base::format(){
-
+int GyemsRMD_base::format() {
+  int16_t buf = 0;
+  buf = myMath.i16c.encoad(classifiedDatas.current.iq);
 };

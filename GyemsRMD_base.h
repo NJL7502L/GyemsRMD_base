@@ -47,14 +47,11 @@ public:
       } position, speed, torque;
     } pid;
     struct {
-      uint8_t current[4], target[4];
+      int32_t current, target; // 1 dps/s
     } accel;
     struct {
-      uint8_t current[2], original[2], offset[2];
-    } encoder;
-    struct {
-      uint8_t multiTurn[8];
-      uint8_t singleTurn[2];
+      double current, original, offset;
+      double multiTurn; // deg
     } angle;
     struct {
       uint8_t temperature;
